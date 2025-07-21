@@ -1,0 +1,69 @@
+---
+description: This release adds new modes, improves UI elements, enhances performance, and fixes several bugs.
+keywords:
+  - roo code 3.23.16
+  - new modes
+  - performance improvements
+  - bug fixes
+image: /img/social-share.jpg
+---
+
+# Roo Code 3.23.16 Release Notes (2025-07-19)
+
+This release adds new modes, improves UI elements, enhances performance, and fixes several bugs.
+
+## New Modes and Mode Enhancements
+
+We've added powerful new modes and enhanced existing ones (thanks hannesrudolph!) ([#5913](https://github.com/RooCodeInc/Roo-Code/pull/5913)):
+
+- **Issue Investigator Mode**: A new mode specifically designed for investigating and analyzing GitHub issues.
+- **Enhanced Issue Writer Mode**: Improved capabilities for creating and managing issues.
+- **Better Mode Discovery**: Custom modes now support description and whenToUse fields for better discoverability (thanks RandalSchwartz!) ([#5862](https://github.com/RooCodeInc/Roo-Code/pull/5862)).
+
+These improvements make it easier to work with GitHub issues and understand when to use each mode.
+
+## Message Management Overhaul
+
+The message editing and deletion system has been completely redesigned (thanks liwilliam2021!) ([#5538](https://github.com/RooCodeInc/Roo-Code/pull/5538)):
+
+- **Better Edit Experience**: More intuitive message editing with improved UI feedback.
+- **Reliable Deletion**: Fixed issues with message deletion not working properly.
+- **Smoother Interactions**: Overall improvements to message management workflows.
+
+This makes managing your conversation history more reliable and user-friendly.
+
+## Provider Updates
+
+* **Mistral Embeddings**: Added support for Mistral embedding provider for better code understanding (thanks SannidhyaSah!) ([#5946](https://github.com/RooCodeInc/Roo-Code/pull/5946))
+* **Ollama UI**: Updated to use text inputs for better user experience (thanks daniel-lxs!) ([#5818](https://github.com/RooCodeInc/Roo-Code/pull/5818))
+* **Claude Model Detection**: Fixed automatic protocol selection for Claude models (thanks daniel-lxs!) ([#5840](https://github.com/RooCodeInc/Roo-Code/pull/5840))
+
+## Performance Improvements
+
+* **Code Indexing**: Added batch limiting to prevent memory issues with large codebases (thanks daniel-lxs!) ([#5891](https://github.com/RooCodeInc/Roo-Code/pull/5891))
+* **Rate Limiting**: Added global rate limiting for OpenAI-compatible embeddings (thanks daniel-lxs!) ([#5854](https://github.com/RooCodeInc/Roo-Code/pull/5854))
+* **Terminal Output**: Added character limits to prevent context explosion from excessive output (thanks roomote!) ([#5777](https://github.com/RooCodeInc/Roo-Code/pull/5777))
+
+## UI/UX Improvements
+
+* **Marketplace Access**: Moved marketplace icon from overflow menu to top navigation for easier access (thanks roomote!) ([#5864](https://github.com/RooCodeInc/Roo-Code/pull/5864))
+* **Go Diagnostics**: Added configurable delay to prevent premature error reporting (thanks roomote!) ([#5863](https://github.com/RooCodeInc/Roo-Code/pull/5863))
+* **YouTube Link**: Added YouTube channel link to website footer (thanks thill2323!) ([#5929](https://github.com/RooCodeInc/Roo-Code/pull/5929))
+
+## Bug Fixes
+
+* **Button Availability**: Fixed export, share, and copy buttons being disabled during API operations (thanks MuriloFP!) ([#5849](https://github.com/RooCodeInc/Roo-Code/pull/5849))
+* **Task Completion**: Prevented task completion when todos are still open (thanks mrubens!) ([#5716](https://github.com/RooCodeInc/Roo-Code/pull/5716))
+* **Docker Conflicts**: Fixed port conflicts for evaluation services (thanks roomote!) ([#5909](https://github.com/RooCodeInc/Roo-Code/pull/5909))
+
+## Developer Experience
+
+* **Command Timeouts**: Added configurable timeout allowlist for long-running commands via IPC (thanks roomote, cte!) ([#5910](https://github.com/RooCodeInc/Roo-Code/pull/5910), [#5825](https://github.com/RooCodeInc/Roo-Code/pull/5825))
+* **API Task Logging**: API-initiated tasks now log to a temporary directory for better debugging (thanks cte!) ([#5833](https://github.com/RooCodeInc/Roo-Code/pull/5833))
+* **Translation Files**: Non-English translation files are now marked as linguist-generated (thanks roomote!) ([#5943](https://github.com/RooCodeInc/Roo-Code/pull/5943))
+
+## Misc Improvements
+
+* **Release Engineering**: Enhanced release engineer mode to include issue numbers and reporters (thanks roomote!) ([#5940](https://github.com/RooCodeInc/Roo-Code/pull/5940))
+* **Code Cleanup**: Removed deprecated orchestrator modes and updated GitHub CLI usage (thanks hannesrudolph!) ([#5832](https://github.com/RooCodeInc/Roo-Code/pull/5832))
+* **Template Fix**: Fixed issue fixer PR template (thanks MuriloFP!) ([#5839](https://github.com/RooCodeInc/Roo-Code/pull/5839))

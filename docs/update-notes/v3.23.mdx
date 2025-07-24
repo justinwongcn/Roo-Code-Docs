@@ -14,7 +14,7 @@ import Codicon from '@site/src/components/Codicon';
 
 # Roo Code 3.23 Release Notes
 
-This release graduates codebase indexing to a stable feature, introduces a powerful new todo list for managing complex tasks, and includes critical performance improvements and bug fixes!
+This release graduates codebase indexing to a stable feature, introduces a powerful new todo list for managing complex tasks, adds Roo Code Cloud waitlist access, and includes critical performance improvements and bug fixes!
 
 ## Codebase Indexing: Always On, Always Ready
 
@@ -41,6 +41,16 @@ We've added the ability to automatically reject unwanted commands in your workfl
 - **Workflow Control**: Complements existing auto-approval functionality with "always reject" option
 
 This gives you better control over command execution in automated workflows.
+
+## Roo Code Cloud Waitlist
+
+We're excited to announce early access to Roo Code Cloud! You can now join the waitlist directly from Roo Code (thanks brunobergher!):
+
+- **Easy Discovery**: Prominent call-to-action buttons appear in the website header and extension interface (for users with 3+ tasks).
+- **Quick Signup**: Join the waitlist with just a click to get early access to cloud features.
+- **Seamless Integration**: The waitlist CTAs are thoughtfully placed to be helpful without being intrusive.
+
+Get ready for the future of cloud-powered AI coding assistance!
 
 ## Windows Support for Claude Code
 
@@ -104,6 +114,8 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 - **MCP Content Optimization**: Automatically omits MCP-related prompts when no servers are configured
 - **Git Installation Check**: Shows clear warning with download link when Git is not installed for checkpoints feature (thanks MuriloFP!)
 - **Configurable Eval Timeouts**: Added slider to set evaluation timeouts between 5-10 minutes
+- **Command Parsing**: Multi-line commands are now properly parsed as separate commands, making it easier to work with scripts or multi-step command sequences
+- **Smarter Auto-Deny**: Commands with subshells are now more intelligently validated - they're only auto-denied if they contain denied prefixes, reducing false denials and making command execution more flexible
 
 ## Bug Fixes
 
@@ -150,6 +162,9 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 - **Vitest Command**: Added missing run parameter to prevent tests hanging in watch mode (thanks KJ7LNW!)
 - **Evaluation System**: Fixed evaluation timeout handling that was broken in a previous update
 - **Cloud Session Handling**: Improved session error handling to prevent unnecessary logouts during service issues
+- **Command Parsing**: Fixed crashes when running complex bash commands with special syntax like BASH_REMATCH arrays. Users can now create and use GitHub CLI aliases with advanced bash features (thanks daniel-lxs, KJ7LNW!)
+- **Error Handling**: Added ErrorBoundary component that prevents the entire UI from crashing. Instead of showing a blank screen, errors now display helpful messages with stack traces (thanks KJ7LNW, elianiva, wolverin0!)
+- **Todo List**: Fixed the todo list toggle feature so users can properly enable or disable automatic todo list tracking in their tasks (thanks chrarnoldus!)
 
 ## Provider Updates
 
@@ -184,6 +199,7 @@ We've added native Windows support for the Claude Code provider (thanks Sannidhy
 - **Merge Resolver Mode**: Added intelligent merge conflict resolution mode that analyzes commit history to make smart decisions about which changes to keep (thanks daniel-lxs!)
 - **Token Fallback Logic**: Improved sliding window with consistent 8192 token fallback for more predictable context handling
 - **Todo List Clarification**: Updated documentation to clarify that todo list tool is for complicated tasks, not just multi-step ones
+- **Command Timeouts**: Improved reliability when terminating unresponsive commands - processes that timeout are now forcefully terminated with SIGKILL, preventing hanging operations
 
 ## Documentation Updates
 

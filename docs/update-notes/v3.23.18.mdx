@@ -1,0 +1,23 @@
+---
+description: This release fixes critical command parsing issues and improves error handling with better UI resilience.
+keywords:
+  - roo code 3.23.18
+  - bash command fixes
+  - error handling
+  - todo list fix
+image: /img/social-share.jpg
+---
+
+# Roo Code 3.23.18 Release Notes (2025-01-24)
+
+This release fixes critical command parsing issues and improves error handling with better UI resilience.
+
+## Bug Fixes
+
+* **Command Parsing**: Fixed crashes when running complex bash commands with special syntax like BASH_REMATCH arrays. Users can now create and use GitHub CLI aliases with advanced bash features (thanks daniel-lxs, KJ7LNW!) ([#5743](https://github.com/RooCodeInc/Roo-Code/pull/5743))
+* **Error Handling**: Added ErrorBoundary component that prevents the entire UI from crashing. Instead of showing a blank screen, errors now display helpful messages with stack traces (thanks KJ7LNW, elianiva, wolverin0!) ([#5085](https://github.com/RooCodeInc/Roo-Code/pull/5085))
+* **Todo List**: Fixed the todo list toggle feature so users can properly enable or disable automatic todo list tracking in their tasks (thanks chrarnoldus!) ([#6103](https://github.com/RooCodeInc/Roo-Code/pull/6103))
+
+## Misc Improvements
+
+* **Command Timeouts**: Improved reliability when terminating unresponsive commands - processes that timeout are now forcefully terminated with SIGKILL, preventing hanging operations ([#6071](https://github.com/RooCodeInc/Roo-Code/pull/6071))

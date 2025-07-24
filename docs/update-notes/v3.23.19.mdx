@@ -1,0 +1,28 @@
+---
+description: This release introduces Roo Code Cloud waitlist access and improves command handling with smarter validation.
+keywords:
+  - roo code 3.23.19
+  - roo code cloud
+  - command handling
+  - auto-deny improvements
+image: /img/social-share.jpg
+---
+
+# Roo Code 3.23.19 Release Notes (2025-01-24)
+
+This release introduces Roo Code Cloud waitlist access and improves command handling with smarter validation.
+
+## Roo Code Cloud Waitlist
+
+We're excited to announce early access to Roo Code Cloud! You can now join the waitlist directly from Roo Code (thanks brunobergher!) ([#6104](https://github.com/RooCodeInc/Roo-Code/pull/6104)):
+
+- **Easy Discovery**: Prominent call-to-action buttons appear in the website header and extension interface (for users with 3+ tasks).
+- **Quick Signup**: Join the waitlist with just a click to get early access to cloud features.
+- **Seamless Integration**: The waitlist CTAs are thoughtfully placed to be helpful without being intrusive.
+
+Get ready for the future of cloud-powered AI coding assistance!
+
+## QOL Improvements
+
+* **Command Parsing**: Multi-line commands are now properly parsed as separate commands, making it easier to work with scripts or multi-step command sequences ([#6121](https://github.com/RooCodeInc/Roo-Code/pull/6121))
+* **Smarter Auto-Deny**: Commands with subshells are now more intelligently validated - they're only auto-denied if they contain denied prefixes, reducing false denials and making command execution more flexible ([#6123](https://github.com/RooCodeInc/Roo-Code/pull/6123))

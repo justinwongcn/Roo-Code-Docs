@@ -1222,7 +1222,7 @@ body {
 @media (min-width: 997px) {
   .navbar__search-input {
     width: 280px !important;
-    padding: 0 80px 0 40px !important; /* Extra right padding for shortcut hint */
+    padding: 0 40px 0 40px !important; /* Reduced right padding since no shortcut hint */
     background-position: 12px center !important;
     cursor: text !important;
   }
@@ -2506,6 +2506,45 @@ html {
 /* Ensure consistent spacing for all tutorial video links */
 .menu__list-item:has(> a[href^="https://www.youtube.com/watch"]) {
   margin-bottom: 0 !important;
+}
+
+/* ============================================
+   HIDE KEYBOARD SHORTCUT HINTS
+   ============================================ */
+
+/* Hide custom keyboard shortcut hint */
+.navbar__search::after {
+  display: none !important;
+}
+
+/* Hide DocSearch keyboard shortcut keys */
+.DocSearch-Button-Keys {
+  display: none !important;
+}
+
+/* Hide any keyboard shortcut elements */
+.navbar__search-shortcut,
+.navbar__search-key,
+.DocSearch-Button-Key,
+[class*="shortcut"],
+[class*="Shortcut"],
+[class*="keyboard"],
+[class*="Keyboard"] {
+  display: none !important;
+}
+
+/* Ensure no keyboard hints show on any state */
+@media (min-width: 997px) {
+  .navbar__search::after,
+  .DocSearch-Button-Keys {
+    display: none !important;
+  }
+}
+
+/* Hide on hover/focus states too */
+.DocSearch-Button:hover .DocSearch-Button-Keys,
+.DocSearch-Button:focus .DocSearch-Button-Keys {
+  display: none !important;
 }
 
 /* ============================================

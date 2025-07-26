@@ -81,8 +81,6 @@ const config: Config = {
   ],
 
   plugins: [
-    // Custom plugin to suppress search plugin warnings
-    './plugins/suppress-search-warnings.js',
     ...(process.env.POSTHOG_API_KEY ? [
       [
         "posthog-docusaurus",

@@ -1,22 +1,3 @@
-# Roo Code Documentation Rules
-
-## Documentation Links
-- Do not include .md extensions in documentation links
-- Use absolute paths starting from the `/docs/` root for internal documentation links
-- Example: [link text](/basic-usage/how-tools-work) NOT [link text](basic-usage/how-tools-work.md) or [link text](../../basic-usage/how-tools-work)
-
-This ensures links work correctly in the built documentation while maintaining clean URLs.
-
-## Context7 MCP
-When making structural or formatting changes beyond simple .md or .mdx files, always check the Context7 MCP, the `context7CompatibleLibraryID` will be `/facebook/docusaurus`
-
-## Release Notes
-Never Thank cte, hannesrudolph, jr, roomote, dleffel or mrubens in release notes
-
-
-## Misc
-When moving a section, make sure to add the forwarding link in docusaurus.config.ts
-
 # CLAUDE.md
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.

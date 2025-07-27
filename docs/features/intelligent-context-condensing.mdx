@@ -98,6 +98,27 @@ Roo Code provides several ways to control and understand the Intelligent Context
 
 ---
 
+## Tips for Effective Context Condensing
+
+### Customizing the Context Reduction Prompt
+
+You can customize the context reduction prompt to better suit your specific domain or use case. This is particularly useful if you find that the default condensing process loses important information specific to your workflow.
+
+To customize the prompt:
+1. Go to Roo Code settings (<Codicon name="gear" /> icon)
+2. Navigate to the "Context" settings section
+3. Find the "Custom Context Condensing Prompt" field
+4. Enter your custom prompt that instructs the AI on how to preserve specific types of information
+
+For example, if you're working on a complex debugging session, you might add instructions like:
+- "Always preserve error messages and stack traces in full"
+- "Maintain all variable names and their last known values"
+- "Keep track of all attempted solutions and their outcomes"
+
+This customization ensures that the context condensing process retains the information most critical to your specific use case.
+
+---
+
 ## Technical Implementation
 
 ### Token Counting
